@@ -1,0 +1,1 @@
+(1, 'BOTH Hospital', 'covishield', datetime.date(2021, 12, 26), 'kumar', 'kumar@gmail.com', 'narayana', 'accepted')

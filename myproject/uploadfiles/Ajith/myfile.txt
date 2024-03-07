@@ -1,0 +1,1 @@
+(1, 'Care', 'covaxin', datetime.date(2023, 4, 6), 'Ajith', 'ajith001@gmail.com', 'Ashfaq', 'accepted')

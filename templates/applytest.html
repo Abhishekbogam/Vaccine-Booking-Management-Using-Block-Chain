@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.7.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{% static 'assets/img/covid-19 icon.jpg' %}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a>Covid - 19</a></h1>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="{% url 'appointmentbooking' %}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Appointment Booking</span></a></li>
+          <li><a href="{% url 'appointmentstatus' %}" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Appointment status</span></a></li>
+          <li><a href="{% url 'patientlogout' %}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Logout</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="{% url 'patientreport' %}" method="post" role="form">
+              {% csrf_token%}
+              <div class="row">
+                <h2 style="color:blue;"><b>Covid Report</b></h2>
+                <div class="form-group col-md-6">
+                  <label for="fever" style="color:green;">Fever</label>
+                  <select name="fever" class="form-control" id="fever" required>
+                    <option value="null">Select Your Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cough" style="color:green;">Cough</label>
+                  <select name="cough" class="form-control" id="cough" required>
+                    <option value="null">Select Your Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="throat" style="color:green;">Throat</label>
+                  <select name="throat" class="form-control" id="throat" required>
+                    <option value="null">Select Your Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="null">No</option>
+                  </select>
+                </div>
+                  <div class="form-group col-md-6">
+                  <label for="breath" style="color:green;">Breath</label>
+                  <select name="breath" class="form-control" id="breath" required>
+                    <option value="null">Select Your Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <br>
+                <h2 style="color:blue;" ><b>General Report</b></h2>
+                <div class="form-group col-md-6">
+                  <label for="gender" style="color:green;">Gender</label>
+                  <select name="gender" class="form-control" id="gender" required>
+                    <option value="null">Select Option</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="smoking" style="color:green;">Smoking</label>
+                  <select name="smoking" class="form-control" id="smoking" required>
+                    <option value="null">Select Option</option>
+                    <option value="never">Never</option>
+                    <option value="casual">Casual</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="alcohol" style="color:green;">Alcohol</label>
+                  <select name="alcohol" class="form-control" id="alcohol" required>
+                    <option value="null">Select Option</option>
+                    <option value="never">Never</option>
+                    <option value="casual">Casual</option>
+                    <option value="high">Hign</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="saltdiet" style="color:green;">High Salt Diet</label>
+                  <select name="saltdiet" class="form-control" id="saltdiet" required>
+                    <option value="null">Select Option</option>
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="fatdiet" style="color:green;">High Saturated fat Diet</label>
+                  <select name="fatdiet" class="form-control" id="fatdiet" required>
+                    <option value="null">Select Option</option>
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="excercise" style="color:green;">Excercise</label>
+                  <select name="exercise" class="form-control" id="excercise" required>
+                    <option value="null">Select Option</option>
+                    <option value="never">Never</option>
+                    <option value="casual">Casual</option>
+                    <option value="regular">Regular</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cholestrol" style="color:green;">cholestrol</label>
+                  <select name="cholestrol" class="form-control" id="cholestrol" required>
+                    <option value="null">Select Option</option>
+                    <option value="low">Low</option>
+                    <option value="normal">Normal</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="bp" style="color:green;">Blood Pressure</label>
+                  <select name="bp" class="form-control" id="bp" required>
+                    <option value="null">Select Option</option>
+                    <option value="low">Low</option>
+                    <option value="normal">Normal</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="sugar" style="color:green;">Sugar</label>
+                  <select name="sugar" class="form-control" id="sugar" required>
+                    <option value="null">Select Option</option>
+                    <option value="low">Low</option>
+                    <option value="normal">Normal</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+                </div><br>
+              <div class="text-center"><button type="submit" class="btn btn-primary">Submit Report</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+  <!-- ======= Footer ======= -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.min.js' %}"></script>
+  <script src="{%static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

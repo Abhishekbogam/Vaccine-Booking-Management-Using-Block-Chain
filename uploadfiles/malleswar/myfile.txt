@@ -1,0 +1,1 @@
+(2, 'SVS Hospital', 'sputnik', datetime.date(2021, 12, 26), 'malleswar', 'malleswar@gmail.com', 'svs', 'accepted') got positive

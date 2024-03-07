@@ -1,0 +1,1 @@
+(3, 'SVS Hospital', 'covishield', datetime.date(2021, 12, 25), 'naresh', 'naresh@gmail.com', 'svs', 'accepted')
